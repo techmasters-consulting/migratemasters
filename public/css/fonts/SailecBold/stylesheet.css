@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'SailecBold';
+	src: url('fonts/SailecBold.eot');
+	src: url('fonts/SailecBold.eot') format('embedded-opentype'),
+			 url('fonts/SailecBold.woff2') format('woff2'),
+			 url('fonts/SailecBold.woff') format('woff'),
+			 url('fonts/SailecBold.ttf') format('truetype'),
+			 url('fonts/SailecBold.svg#SailecBold') format('svg');
+}

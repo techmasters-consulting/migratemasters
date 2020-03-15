@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'SailecRegular';
+	src: url('fonts/SailecRegular.eot');
+	src: url('fonts/SailecRegular.eot') format('embedded-opentype'),
+			 url('fonts/SailecRegular.woff2') format('woff2'),
+			 url('fonts/SailecRegular.woff') format('woff'),
+			 url('fonts/SailecRegular.ttf') format('truetype'),
+			 url('fonts/SailecRegular.svg#SailecRegular') format('svg');
+}
