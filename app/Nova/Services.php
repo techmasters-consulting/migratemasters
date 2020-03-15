@@ -52,10 +52,10 @@ class Services extends Resource
              Text::make('Slug'),
 
 
-//            Select::make('country')->options([
-//                '0' => 'Normal Services',
-//                '1' => 'Country Services',
-//            ]),
+            Select::make('country')->options([
+                '0' => 'Normal Services',
+                '1' => 'Country Services',
+            ]),
 
             Textarea::make('Intro', 'excerpt'),
             Froala::make('Content', 'body'),

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Articles;
-use Illuminate\Http\Request;
+
+use App\Services;
 use Illuminate\Support\Facades\DB;
 use Spatie\Tags\Tag;
 
@@ -15,7 +15,7 @@ class HomeController extends Controller
     {
         //dd(auth('api')->user());
         $articles = $this->getArticleMenu();
-        $services = $this->getServiceMenu();
+        $services = Services::where('country',0)->take(7)->latest()->get();
         $articlesList = DB::table('articles')
             ->latest()
             ->limit(3)
@@ -32,17 +32,18 @@ class HomeController extends Controller
         $germanys = DB::table('taggables')->where('tag_id',    $countryService['4'])->pluck('taggable_id');
         $netherlands = DB::table('taggables')->where('tag_id',    $countryService['5'])->pluck('taggable_id');
         $frances = DB::table('taggables')->where('tag_id',    $countryService['6'])->pluck('taggable_id');
+        $mauritiuss = DB::table('taggables')->where('tag_id',    $countryService['7'])->pluck('taggable_id');
         #austrila
         $australiaArray = array();
         foreach($australia as $australiaData){
-            $australiaPush =  DB::table('services')->where('id',    $australiaData)->get();
+            $australiaPush =  DB::table('services')->where('id',    $australiaData)->first();
             $australiaArray[] = $australiaPush;
         }
         $australia = $australiaArray;
         ##canada
         $canadaArray = array();
         foreach($canadas as $canadasData){
-            $canadaPush =  DB::table('services')->where('id',    $canadasData)->get();
+            $canadaPush =  DB::table('services')->where('id',    $canadasData)->first();
             $canadaArray[] = $canadaPush;
         }
         $canada = $canadaArray;
@@ -50,7 +51,7 @@ class HomeController extends Controller
         ##uk
         $ukArray = array();
         foreach($uks as $ukData){
-            $ukPush =  DB::table('services')->where('id',    $ukData)->get();
+            $ukPush =  DB::table('services')->where('id',    $ukData)->first();
             $ukArray[] = $ukPush;
         }
         $uk = $ukArray;
@@ -58,15 +59,15 @@ class HomeController extends Controller
         ##us
         $usaArray = array();
         foreach($usas as $usaData){
-            $usaPush =  DB::table('services')->where('id',    $usaData)->get();
+            $usaPush =  DB::table('services')->where('id',    $usaData)->first();
             $usaArray[] = $usaPush;
         }
-        $us = $usaArray;
+        $usa = $usaArray;
 
         ##germany
         $germanyArray = array();
         foreach($germanys as $germanyData){
-            $germanyPush =  DB::table('services')->where('id',    $germanyData)->get();
+            $germanyPush =  DB::table('services')->where('id',    $germanyData)->first();
             $germanyArray[] = $germanyPush;
         }
         $germany = $germanyArray;
@@ -75,7 +76,7 @@ class HomeController extends Controller
         ##frances
         $franceArray = array();
         foreach($frances as $franceData){
-            $francePush =  DB::table('services')->where('id',    $franceData)->get();
+            $francePush =  DB::table('services')->where('id',    $franceData)->first();
             $franceArray[] = $francePush;
         }
         $france = $franceArray;
@@ -83,11 +84,19 @@ class HomeController extends Controller
         ##netherland
         $netherlandArray = array();
         foreach($netherlands as $netherlandData){
-            $netherlandPush =  DB::table('services')->where('id',    $netherlandData)->get();
+            $netherlandPush =  DB::table('services')->where('id',    $netherlandData)->first();
             $netherlandArray[] = $netherlandPush;
         }
         $netherland = $netherlandArray;
-        return view('index', compact('articles','services','articlesList','australia','canada','uk','us','germany','netherland','france'));
+
+        ##mauritius
+        $mauritiusArray = array();
+        foreach($mauritiuss as $mauritiusData){
+            $mauritiusPush =  DB::table('services')->where('id',    $mauritiusData)->first();
+            $mauritiusArray[] = $mauritiusPush;
+        }
+        $mauritius = $mauritiusArray;
+        return view('index', compact('articles','services','articlesList','australia','canada','uk','usa','germany','netherland','france','mauritius'));
     }
 
     public function marker_info()

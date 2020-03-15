@@ -569,7 +569,11 @@
                                 <span>France</span>
                                 <img src="images/flags/france.png" alt="flag-icon" />
                             </li>
-
+                            <!-- TAB-8 LINK -->
+                            <li class="tab-link" data-tab="tab-8">
+                                <span>Mauritius</span>
+                                <img src="images/flags/mauritius.png" alt="flag-icon" />
+                            </li>
                         </ul>
                     </div>
                 </div>	<!-- END TABS NAVIGATION -->
@@ -582,211 +586,79 @@
 
                         <!-- TAB-1 CONTENT -->
                         <div id="tab-1" class="tab-content current">
+
                             <div class="owl-carousel owl-theme owl-loaded tab-carousel">
 
-                                @foreach($canada as $cdn)
-                                    @foreach($cdn as $cdns)
 
+                            @foreach($canada as $cdns)
                                 <!-- TAB BOX #1 -->
-                                <div class="tbox-1">
+                                    <div class="tbox-1">
 
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
+                                        <!-- Image -->
+                                        <div class="hover-overlay">
 
-                                        <img class="img-fluid" src="{{url('/storage/'.$cdns->featured_image)}}" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
+                                            <img class="img-fluid" src="{{url('/storage/'.$cdns->featured_image)}}" alt="tab-box-image" />
+                                            <div class="item-overlay"></div>
 
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
+                                            <!-- Box Link -->
+                                            <div class="tbox-link">
+                                                <a href="{{url('services/'.$cdns->slug ?? '')}}" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
+                                                    <span>Read More <i class="fas fa-arrow-right"></i></span>
+                                                </a>
+                                            </div>
+
                                         </div>
+
+                                        <!-- Title -->
+                                        <h5 class="h5-xs darkblue-color">{{$cdns->title ?? ''}}</h5>
+
+                                        <!-- Text -->
+                                        <p>{{$cdns->excerpt ?? ''}}</p>
 
                                     </div>
 
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">{{$cdns->title ?? ''}}</h5>
-
-                                    <!-- Text -->
-                                    <p>{{$cdns->excerpt ?? ''}}</p>
-
-                                </div>
 
                                 @endforeach
-                                @endforeach
+
 
 
                             </div>	<!-- End tab-carousel -->
+
                         </div>	<!-- END TAB-1 CONTENT -->
 
 
                         <!-- TAB-2 CONTENT -->
                         <div id="tab-2" class="tab-content">
                             <div class="owl-carousel owl-theme owl-hidden tab-carousel">
-
-
+                            @foreach($australia as $aus)
                                 <!-- TAB BOX #1 -->
-                                <div class="tbox-1">
+                                    <div class="tbox-1">
 
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
+                                        <!-- Image -->
+                                        <div class="hover-overlay">
 
-                                        <img class="img-fluid" src="images/study-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
+                                            <img class="img-fluid" src="{{url('/storage/'.$aus->featured_image)}}" alt="tab-box-image" />
+                                            <div class="item-overlay"></div>
 
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
+                                            <!-- Box Link -->
+                                            <div class="tbox-link">
+                                                <a href="{{url('/services/'.$aus->slug ?? "")}}" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
+                                                    <span>Read More <i class="fas fa-arrow-right"></i></span>
+                                                </a>
+                                            </div>
+
                                         </div>
+
+                                        <!-- Title -->
+                                        <h5 class="h5-xs darkblue-color">{{$aus->title ?? ''}}</h5>
+
+                                        <!-- Text -->
+                                        <p>{{$aus->excerpt ?? ''}}</p>
 
                                     </div>
 
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Student Visa</h5>
 
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #2 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/travel-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Travel Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #3 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/family-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Family Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #4 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/migrate-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">PR Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #5 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/job-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Job Seeker Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #6 -->
-                                <div class="tbox-1">
-
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/business-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Business Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
+                            @endforeach
 
 
                             </div>	<!-- End tab-carousel -->
@@ -798,167 +670,35 @@
                             <div class="owl-carousel owl-theme owl-hidden tab-carousel">
 
 
+                            @foreach($uk as $uks)
                                 <!-- TAB BOX #1 -->
-                                <div class="tbox-1">
+                                    <div class="tbox-1">
 
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
+                                        <!-- Image -->
+                                        <div class="hover-overlay">
 
-                                        <img class="img-fluid" src="images/study-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
+                                            <img class="img-fluid" src="{{url('/storage/'.$uks->featured_image)}}" alt="tab-box-image" />
+                                            <div class="item-overlay"></div>
 
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
+                                            <!-- Box Link -->
+                                            <div class="tbox-link">
+                                                <a href="{{url('/services/'.$uks->slug ?? "")}}" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
+                                                    <span>Read More <i class="fas fa-arrow-right"></i></span>
+                                                </a>
+                                            </div>
+
                                         </div>
+
+                                        <!-- Title -->
+                                        <h5 class="h5-xs darkblue-color">{{$uks->title ?? ''}}</h5>
+
+                                        <!-- Text -->
+                                        <p>{{$uks->excerpt ?? ''}}</p>
 
                                     </div>
 
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Student Visa</h5>
 
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #2 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/travel-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Travel Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #3 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/family-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Family Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #4 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/migrate-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">PR Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #5 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/job-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Job Seeker Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #6 -->
-                                <div class="tbox-1">
-
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/business-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Business Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
+                                @endforeach
 
 
                             </div>	<!-- End tab-carousel -->
@@ -970,167 +710,35 @@
                             <div class="owl-carousel owl-theme owl-hidden tab-carousel">
 
 
+                            @foreach($usa as $us)
                                 <!-- TAB BOX #1 -->
-                                <div class="tbox-1">
+                                    <div class="tbox-1">
 
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
+                                        <!-- Image -->
+                                        <div class="hover-overlay">
 
-                                        <img class="img-fluid" src="images/study-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
+                                            <img class="img-fluid" src="{{url('/storage/'.$us->featured_image)}}" alt="tab-box-image" />
+                                            <div class="item-overlay"></div>
 
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
+                                            <!-- Box Link -->
+                                            <div class="tbox-link">
+                                                <a href="{{url('/services/'.$us->slug ?? "")}}" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
+                                                    <span>Read More <i class="fas fa-arrow-right"></i></span>
+                                                </a>
+                                            </div>
+
                                         </div>
+
+                                        <!-- Title -->
+                                        <h5 class="h5-xs darkblue-color">{{$us->title ?? ''}}</h5>
+
+                                        <!-- Text -->
+                                        <p>{{$us->excerpt ?? ''}}</p>
 
                                     </div>
 
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Student Visa</h5>
 
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #2 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/travel-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Travel Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #3 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/family-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Family Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #4 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/migrate-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">PR Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #5 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/job-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Job Seeker Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #6 -->
-                                <div class="tbox-1">
-
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/business-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Business Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
+                                @endforeach
 
 
                             </div>	<!-- End tab-carousel -->
@@ -1142,168 +750,35 @@
                             <div class="owl-carousel owl-theme owl-hidden tab-carousel">
 
 
+                            @foreach($germany as $ger)
                                 <!-- TAB BOX #1 -->
-                                <div class="tbox-1">
+                                    <div class="tbox-1">
 
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
+                                        <!-- Image -->
+                                        <div class="hover-overlay">
 
-                                        <img class="img-fluid" src="images/study-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
+                                            <img class="img-fluid" src="{{url('/storage/'.$ger->featured_image)}}" alt="tab-box-image" />
+                                            <div class="item-overlay"></div>
 
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
+                                            <!-- Box Link -->
+                                            <div class="tbox-link">
+                                                <a href="{{url('/services/'.$ger->slug ?? "")}}" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
+                                                    <span>Read More <i class="fas fa-arrow-right"></i></span>
+                                                </a>
+                                            </div>
+
                                         </div>
+
+                                        <!-- Title -->
+                                        <h5 class="h5-xs darkblue-color">{{$ger->title ?? ''}}</h5>
+
+                                        <!-- Text -->
+                                        <p>{{$ger->excerpt ?? ''}}</p>
 
                                     </div>
 
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Student Visa</h5>
 
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #2 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/travel-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Travel Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #3 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/family-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Family Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #4 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/migrate-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">PR Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #5 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/job-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Job Seeker Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #6 -->
-                                <div class="tbox-1">
-
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/business-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Business Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
+                                @endforeach
 
                             </div>	<!-- End tab-carousel -->
                         </div>	<!-- END TAB-5 CONTENT -->
@@ -1314,168 +789,35 @@
                             <div class="owl-carousel owl-theme owl-hidden tab-carousel">
 
 
+                            @foreach($netherland as $neth)
                                 <!-- TAB BOX #1 -->
-                                <div class="tbox-1">
+                                    <div class="tbox-1">
 
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
+                                        <!-- Image -->
+                                        <div class="hover-overlay">
 
-                                        <img class="img-fluid" src="images/study-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
+                                            <img class="img-fluid" src="{{url('/storage/'.$neth->featured_image)}}" alt="tab-box-image" />
+                                            <div class="item-overlay"></div>
 
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
+                                            <!-- Box Link -->
+                                            <div class="tbox-link">
+                                                <a href="{{url('/services/'.$neth->slug ?? "")}}" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
+                                                    <span>Read More <i class="fas fa-arrow-right"></i></span>
+                                                </a>
+                                            </div>
+
                                         </div>
+
+                                        <!-- Title -->
+                                        <h5 class="h5-xs darkblue-color">{{$neth->title ?? ''}}</h5>
+
+                                        <!-- Text -->
+                                        <p>{{$neth->excerpt ?? ''}}</p>
 
                                     </div>
 
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Student Visa</h5>
 
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #2 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/travel-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Travel Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #3 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/family-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Family Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #4 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/migrate-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">PR Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #5 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/job-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Job Seeker Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #6 -->
-                                <div class="tbox-1">
-
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/business-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Business Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
+                                @endforeach
 
                             </div>	<!-- End tab-carousel -->
                         </div>	<!-- END TAB-6 CONTENT -->
@@ -1485,174 +827,77 @@
                         <div id="tab-7" class="tab-content">
                             <div class="owl-carousel owl-theme owl-hidden tab-carousel">
 
-
+                            @foreach($france as $fra)
                                 <!-- TAB BOX #1 -->
-                                <div class="tbox-1">
+                                    <div class="tbox-1">
 
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
+                                        <!-- Image -->
+                                        <div class="hover-overlay">
 
-                                        <img class="img-fluid" src="images/study-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
+                                            <img class="img-fluid" src="{{url('/storage/'.$fra->featured_image)}}" alt="tab-box-image" />
+                                            <div class="item-overlay"></div>
 
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
+                                            <!-- Box Link -->
+                                            <div class="tbox-link">
+                                                <a href="{{url('/services/'.$fra->slug ?? "")}}" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
+                                                    <span>Read More <i class="fas fa-arrow-right"></i></span>
+                                                </a>
+                                            </div>
+
                                         </div>
+
+                                        <!-- Title -->
+                                        <h5 class="h5-xs darkblue-color">{{$fra->title ?? ''}}</h5>
+
+                                        <!-- Text -->
+                                        <p>{{$fra->excerpt ?? ''}}</p>
 
                                     </div>
 
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Student Visa</h5>
 
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #2 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/travel-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Travel Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #3 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/family-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Family Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #4 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/migrate-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">PR Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #5 -->
-                                <div class="tbox-1">
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/job-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Job Seeker Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
-
-                                <!-- TAB BOX #6 -->
-                                <div class="tbox-1">
-
-
-                                    <!-- Image -->
-                                    <div class="hover-overlay">
-
-                                        <img class="img-fluid" src="images/business-600x800.jpg" alt="tab-box-image" />
-                                        <div class="item-overlay"></div>
-
-                                        <!-- Box Link -->
-                                        <div class="tbox-link">
-                                            <a href="#" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
-                                                <span>Read More <i class="fas fa-arrow-right"></i></span>
-                                            </a>
-                                        </div>
-
-                                    </div>
-
-                                    <!-- Title -->
-                                    <h5 class="h5-xs darkblue-color">Business Visa</h5>
-
-                                    <!-- Text -->
-                                    <p>Porta semper lacus cursus, feugiat primis ultrice ligula in risus and auctor tempus</p>
-
-                                </div>
-
+                                @endforeach
 
                             </div>	<!-- End tab-carousel -->
                         </div>	<!-- END TAB-7 CONTENT -->
 
+                        <!-- TAB-8 CONTENT -->
+                        <div id="tab-8" class="tab-content">
+                            <div class="owl-carousel owl-theme owl-hidden tab-carousel">
 
+
+                            @foreach($mauritius as $mur)
+                                <!-- TAB BOX #1 -->
+                                    <div class="tbox-1">
+
+                                        <!-- Image -->
+                                        <div class="hover-overlay">
+
+                                            <img class="img-fluid" src="{{url('/storage/'.$mur->featured_image)}}" alt="tab-box-image" />
+                                            <div class="item-overlay"></div>
+
+                                            <!-- Box Link -->
+                                            <div class="tbox-link">
+                                                <a href="{{url('/services/'.$mur->slug ?? "")}}" class="btn btn-sm btn-tra-white primary-hover btn-arrow">
+                                                    <span>Read More <i class="fas fa-arrow-right"></i></span>
+                                                </a>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- Title -->
+                                        <h5 class="h5-xs darkblue-color">{{$mur->title ?? ''}}</h5>
+
+                                        <!-- Text -->
+                                        <p>{{$mur->excerpt ?? ''}}</p>
+
+                                    </div>
+
+
+                                @endforeach
+
+
+                            </div>	<!-- End tab-carousel -->
+                        </div>	<!-- END TAB-8 CONTENT -->
                     </div>	<!-- END TABS CONTENT -->
 
 

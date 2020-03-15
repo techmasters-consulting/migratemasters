@@ -17,9 +17,8 @@ class ArticlesController extends Controller
         $tags = DB::table('tags')
             ->get();
 
-       // $dd =$articles->tagsWithType('brother');
-        $dd =   Tag::findOrCreate('headline', 'newsTag');
-        dd($dd);
+
+
         return view('articles.index', array('services'=>$services, 'articles'=>$articles,'tags'=>$tags));
         //$articles = Articles::where('is_published','true')->get();
         //$tags = Tags::pluck('name', 'id')->toArray();
