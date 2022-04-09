@@ -21,7 +21,7 @@
         "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
-        "moment": "^2.24.0",
+        "moment": "^2.29.2",
         "portal-vue": "^2.1.7",
         "sweetalert2": "^9.9.0",
         "vform": "^1.0.1",
